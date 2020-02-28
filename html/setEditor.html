@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Flash Cards</title>
+    <link rel="stylesheet" href="../css/setEditor.css">
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    
+    <div class="home">
+        <a href="index.html">
+            <img src="../misc/home.png" alt="Home">
+        </a>
+    </div>
+
+    <div class="editor">
+        <input type="text" class="textField" id="titleEditor" autocomplete="off">
+        <div class="QAEditor">
+
+            <div class="questionNavigator">
+
+                <div class="button" id="prev">
+                    prev
+                </div>
+
+                <div id="counter">
+                </div>
+
+                <div class="button" id="next">
+                    Next
+                </div>
+
+            </div>
+
+
+            <div class="textEdit" id="questionEditor">
+                <textarea name="Question" class="textField" id="question" cols="30" rows="10" autocomplete="off"></textarea>
+            </div>
+
+
+            <div class="textEdit" id="answerEditor">
+                <textarea name="answer" class="textField" id="answer" cols="30" rows="10" autocomplete="off"></textarea>
+            </div>
+
+
+            <div class="questionNavigator">
+
+                <div class="button" id="del">
+                    Delete Question
+                </div>
+
+                <div class="button" id="add">
+                    Add Question
+                </div>
+
+                <div class="button" id="save">
+                    Save Changes
+                </div>
+                
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="../js/setEditor.js"></script>
+</body>
+</html>

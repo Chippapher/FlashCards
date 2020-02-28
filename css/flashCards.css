@@ -1,0 +1,144 @@
+
+/*colour variables*/
+:root{
+    --body_bg : rgb(40,40,40); 
+    --button_bg : rgb(180,180,180);
+    --button_active_bg : rgb(140,140,140);
+    --button_txt_clr: black;
+    --qa_bg:  rgb(80,80,80);
+    --qa_txt_clr :rgb(220,220,220);
+    --disabled_btn_clr: lightgrey;
+    --disabled_btn_txt_clr: grey;
+}
+.home{
+    position:sticky;
+    top:0;
+    left:0;
+}
+img{
+    cursor: pointer;
+    height: 2.5em;
+    width:2.5em;
+    background-color: var(--qa_bg);
+}
+html{
+    overflow: hidden;
+}
+* {
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--qa_txt_clr);
+}
+body{
+    background-color: var(--body_bg);
+    margin:0;
+}
+
+.nav{
+    display:grid;
+}
+
+#completion{
+    text-align: center;
+}
+.button{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 100ms;
+    color:var(--button_txt_clr);
+    background-color: var(--button_bg);
+    font-weight: 800;
+    box-shadow: none;
+    border:none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.button:active{
+    background-color: var(--button_active_bg);
+    transition: 100ms;
+}
+.disabled{
+    background-color: var(--disabled_btn_clr);
+    color: var(--disabled_btn_txt_clr)
+}
+
+/*might use this for button animations later on*/
+.button::after{
+    display:block;
+    /* content: ''; */
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color:red;
+    z-index: 100;
+}
+
+#answer{
+    color: var(--qa_bg);
+}
+.answer, .question{
+    position: relative;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    box-shadow: 0 0 15px 8px rgba(0,0,0,.15);
+    background-color: var(--qa_bg);
+    text-align: center;
+}
+
+.answer:hover > #answer{
+    transition-duration: 250ms;
+    transition-property: all;
+    color: var(--qa_txt_clr);
+}
+
+.nav{
+    margin:0;
+    grid-template-columns: 30vw 40vw 30vw;
+    width: 100vw;
+}
+
+.button{
+    padding: .5em;
+    font-size: small;
+}
+
+.answer, .question{
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 80vw;
+    height: 35vh;
+    margin-top: 1vh;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 750px){
+    .nav{
+        grid-template-columns: 10vw 60vw 10vw;
+        width: 100vw;
+        margin-left: 10vw
+    }
+    
+    .button{
+        padding: .5em;
+        font-size: large;
+    }
+
+    .answer, .question{
+        padding-left: 1em;
+        padding-right: 1em;
+        width: 80vw;
+        height: 40vh;
+        margin-left: 10vw;
+        margin-top: 1vh;
+        font-size: 2em;
+    }
+    
+}

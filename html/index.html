@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Cards</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/common.js"></script>
+</head>
+<body>
+    <h1>Custom Flash Cards</h1>
+    <div class="main">
+        <div class="sidebar">
+            <header>Flash Cards</header>
+            <ul id="setlist"></ul>
+        </div>
+        <div class="mainbar">
+            <div class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, odio, cupiditate neque officia, voluptatem eius eligendi quisquam maiores accusantium quod tempore eaque! Possimus voluptatibus cumque necessitatibus earum quaerat assumenda incidunt!
+            </div>
+            <div class="textproc">
+                <input name="title" type="text" id="title" aria-label="Title" placeholder="Title" required>
+
+                <textarea placeholder="Question:Answer; Question:answer;..." name="List of Questions and Answers" id="rawInput" cols="30" rows="10" class="input"></textarea>
+
+                <div class="button" id="create">
+                    Create
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>
