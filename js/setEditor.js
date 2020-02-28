@@ -73,9 +73,13 @@ function saveCurrentQuestion(){
     })
     let del = new Button("del", ()=>{
         let q = QUESTION_SET.splice(QUESTION_INDEX , 1)
-        console.log(q)
-        console.log(QUESTION_SET[QUESTION_INDEX])
         if(QUESTION_INDEX >= QUESTION_SET.length){
+            QUESTION_INDEX = 0
+        }
+
+        if(QUESTION_SET.length <= 1){
+            QUESTION_SET= []
+            QUESTION_SET.push(new Question("", ""))
             QUESTION_INDEX = 0
         }
         setQuestionText()
