@@ -77,7 +77,7 @@ function saveCurrentQuestion(){
             QUESTION_INDEX = 0
         }
 
-        if(QUESTION_SET.length <= 1){
+        if(QUESTION_SET.length < 1){
             QUESTION_SET= []
             QUESTION_SET.push(new Question("", ""))
             QUESTION_INDEX = 0

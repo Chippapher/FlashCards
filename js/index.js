@@ -7,7 +7,8 @@ const create = new Button("create", () =>{
     const title = document.getElementById("title").value
     if(title != ""){
     window.localStorage.setItem(title, JSON.stringify(questions))
-    console.log(questions)
+    document.getElementById("rawInput").value = ""
+    document.getElementById("title").value = ""
     } else {
         alert("Please enter a title for your question set.")
     }
@@ -66,8 +67,10 @@ function populateSetlist(){
             let yes = window.confirm(`delete ${key}?`)
             if(yes){
                 storage.removeItem(key);
-            }})
+            }
             populateSetlist()
+        })
+            
     }
 
 }
