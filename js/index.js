@@ -37,7 +37,7 @@ function populateSetlist(){
         let listitem = document.createElement("li")
 
         let fcLink = document.createElement("a")
-        fcLink.href = `flashCards.html#${key}`
+        fcLink.href = `./html/flashCards.html#${key}`
         fcLink.innerHTML = key
 
         let delLink = document.createElement("a")
@@ -47,7 +47,7 @@ function populateSetlist(){
         delLink.innerHTML= "delete"
 
         let editLink = document.createElement("a")
-        editLink.href= `setEditor.html#${key}`
+        editLink.href= `./html/setEditor.html#${key}`
         editLink.classList= "delete"
         editLink.id = `edit{key}`
         editLink.innerHTML = "edit"
