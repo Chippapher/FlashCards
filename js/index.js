@@ -67,6 +67,7 @@ function populateSetlist(){
             if(yes){
                 storage.removeItem(key);
             }})
+            populateSetlist()
     }
 
 }
